@@ -1,0 +1,24 @@
+{
+  "name": "nodejs_hdfilme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "asnyc": "^0.0.1-security",
+    "async": "^3.2.4",
+    "body-parser": "^1.20.0",
+    "cli-progress": "^3.11.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "progress": "^2.0.3",
+    "request": "^2.88.2"
+  }
+}
