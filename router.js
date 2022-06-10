@@ -50,11 +50,12 @@ class Downloader {
 const dl = new Downloader();
 
 router.get('/queue', (req, res) => {
-    console.log(dl.q.workersList());
+    let arr = [];
+    arr.push(dl.q.workersList());
     for (let item of dl.q) {
-        console.log(item)
+        arr.push(item);
     }
-    res.send();
+    res.send(JSON.stringify(arr));
 })
 
 router.post('/download', (req, res) => {
