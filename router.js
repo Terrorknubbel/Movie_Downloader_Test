@@ -3,7 +3,6 @@ var router = express.Router();
 
 const request = require('request')
 const async = require('async')
-const fs = require('fs')
 const ProgressBar = require('progress')
 
 // let DOWNLOAD_PATH = "./";

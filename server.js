@@ -1,5 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const https = require('https');
+const fs = require('fs');
+const path = require('path');
 const router = require('./router.js');
 var cors = require('cors');
 
@@ -11,6 +14,11 @@ app.use( bodyParser.json() );
 
 app.use('/', router);
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+const httpsOptions = {
+    cert: fs.readFileSync(path.join(__dirname, 'ssl', 'server.crt')),
+    key: fs.readFileSync(path.join(__dirname, 'ssl', 'server.key'))
+}
+
+https.createServer(httpsOptions, app).listen(port, function(){
+    console.log(`Server listening on port ${port}`)
 })
